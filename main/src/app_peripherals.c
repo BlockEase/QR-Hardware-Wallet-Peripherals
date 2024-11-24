@@ -25,7 +25,6 @@
 
 #define VERSION 1
 #define OEM_CONFIG_VERSION_FILE "version.txt"
-#define OEM_CONFIG_SPLASH_FILE "splash.bin"
 #define OEM_CONFIG_PERIPHERALS_FILE "peripherals.bin"
 
 #if CONFIG_LCD_ST7735
