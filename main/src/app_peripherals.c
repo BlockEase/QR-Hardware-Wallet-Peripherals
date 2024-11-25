@@ -25,19 +25,14 @@
 
 #define VERSION 1
 #define OEM_CONFIG_VERSION_FILE "version.txt"
-#define OEM_CONFIG_SPLASH_FILE "splash.bin"
 #define OEM_CONFIG_PERIPHERALS_FILE "peripherals.bin"
 
-#if CONFIG_LCD_ST7735
-#include "esp_lcd_panel_st7735.h"
-#elif CONFIG_LCD_ST7789
+#if CONFIG_LCD_ST7789
 #include "esp_lcd_panel_st7789.h"
-#elif CONFIG_LCD_ST7796
-#include "esp_lcd_panel_st7796.h"
-#elif CONFIG_LCD_ILI9341
-#include "esp_lcd_panel_ili9341.h"
-#elif CONFIG_LCD_GC9A01
-#include "esp_lcd_gc9a01.h"
+#elif CONFIG_LCD_SSD1306
+#include "esp_lcd_panel_ssd1306.h"
+#elif CONFIG_LCD_nt35510
+#include "esp_lcd_panel_nt35510.h"
 #endif
 
 #if CONFIG_TOUCH_CST816S
@@ -741,6 +736,10 @@ bool app_peripherals_write(char *oem_partition_label)
             config->lcd_module = LCD_MODULE_ST7796;
 #elif CONFIG_LCD_ILI9341
             config->lcd_module = LCD_MODULE_ILI9341;
+#elif CONFIG_LCD_SSD1306
+            config->lcd_module = LCD_MODULE_SSD1306;
+#elif CONFIG_LCD_NT35510
+            config->lcd_module = LCD_MODULE_NT35510;
 #elif CONFIG_LCD_GC9A01
             config->lcd_module = LCD_MODULE_GC9A01;
 #else

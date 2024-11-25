@@ -1,4 +1,4 @@
 # Name,   Type, SubType,  Offset,   Size,  Flags
 nvs_key,  data, nvs_keys, 0x9000,     4K
-factory,  app,  factory,        ,     4M
-oem,      data, spiffs,         ,     3M
+oem,      data, spiffs,         ,     1M
+factory,  app,  factory,        ,     6M

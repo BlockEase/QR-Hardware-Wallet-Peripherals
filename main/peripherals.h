@@ -52,11 +52,13 @@
  * LCD Module Settings
  *********************/
 // set lcd module here
-#define CONFIG_LCD_ST7735 0  /*     ─┐                                            */
-#define CONFIG_LCD_ST7789 1  /*      │                                            */
-#define CONFIG_LCD_ST7796 0  /*      ├─  Set LCD Module                           */
-#define CONFIG_LCD_ILI9341 0 /*      │                                            */
-#define CONFIG_LCD_GC9A01 0  /*     ─┘                                            */
+#define CONFIG_LCD_ST7735 0  /* not supported yet   ─┐                                            */
+#define CONFIG_LCD_ST7789 1  /* supported            │                                            */
+#define CONFIG_LCD_ST7796 0  /* not supported yet    │                                            */
+#define CONFIG_LCD_ILI9341 0 /* not supported yet    ├─  Set LCD Module                           */
+#define CONFIG_LCD_SSD1306 0 /* supported            │                                            */
+#define CONFIG_LCD_NT35510 0 /* supported            │                                            */
+#define CONFIG_LCD_GC9A01 0  /* not supported yet   ─┘                                            */
 
 // set lcd gpio pins here
 #define CONFIG_LCD_GPIO_SCLK 39 /*      ─┐                                       */
